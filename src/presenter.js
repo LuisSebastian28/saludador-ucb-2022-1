@@ -12,6 +12,10 @@ const tiempo = document.querySelector("#hora-form");
 const valor = document.querySelector("#hora");
 const val = document.querySelector("#fin");
 const hor = document.querySelector("#resultado-hor");
+//pal idioma
+const idioma = document.querySelector("#len-form");
+const lenguaje = document.querySelector("#idioma-persona");
+const resp_id = document.querySelector("#resultado-id");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -53,4 +57,25 @@ tiempo.addEventListener("submit", (event) => {
     hor.innerHTML = "<p> Buenas Noches " + Nombre + "</p>";      
   }   
 });
+
+idioma.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const idi = lenguaje.value;  
+  const Nombre = nombre.value;  
+
+  if(idi == "Español"){
+    resp_id.innerHTML = "<p> Hola " + Nombre + "</p>";      
+  }
+  if(idi == "English"){
+    resp_id.innerHTML = "<p> Hello " + Nombre + "</p>";      
+  }
+  if(idi == "Hawaiano"){
+    resp_id.innerHTML = "<p> aloha " + Nombre + "</p>";      
+  }
+  if(idi == "Japones"){
+    resp_id.innerHTML = "<p> kon'nichiwa " + Nombre + "</p>";      
+  }
+});
+
 
